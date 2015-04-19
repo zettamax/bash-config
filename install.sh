@@ -61,7 +61,6 @@ source ~/.bashrc
 echo "source $dir/bashrc.sh
 " > $bashrc
 
-echo "New config active!"
-source $bashrc
+echo "Done! Restart shell"
 
 touch $dir/.installed
