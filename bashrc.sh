@@ -2,7 +2,7 @@
 #Please edit this file instead of ~/.bashrc
 
 #Old .bashrc
-if [ -f $this_dir/user_bashrc.sh ]; then
+if [ -f user_bashrc.sh ]; then
     source user_bashrc.sh
 fi
 
