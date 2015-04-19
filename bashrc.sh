@@ -2,9 +2,9 @@
 #Please edit this file instead of ~/.bashrc
 
 #Old .bashrc
-if [ -f user_bashrc.sh ]; then
-    source user_bashrc.sh
+if [ -f ~/bash-config/user_bashrc.sh ]; then
+    source ~/bash-config/user_bashrc.sh
 fi
 
 #Aliases file
-source aliases.sh
+source ~/bash-config/aliases.sh
