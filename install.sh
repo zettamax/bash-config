@@ -3,7 +3,7 @@
 
 dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd );
 
-if [ -f $dir/.installed ]
+if [ -f $dir/.installed ]; then
     echo "Already installed. Exiting..."
     exit 2
 fi
