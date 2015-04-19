@@ -30,7 +30,7 @@ Options:
     exit 0
 }
 
-while getopts ":hd" opt; do
+while getopts ":h" opt; do
   case $opt in
     h)
         show_help ;;
