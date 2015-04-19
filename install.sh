@@ -42,13 +42,13 @@ Note that this .bashrc file won't be under VCS.
 Don't worry, everything will be ok.
 > I understand this" || exit 1
 
-$bashrc=~/.bashrc
-$bashrc_saved=$dir/user_bashrc.sh
+bashrc=~/.bashrc
+bashrc_saved=$dir/user_bashrc.sh
 if [ -f $bashrc ] && [ -s $bashrc ]; then
     cat $bashrc > $bashrc_saved
 fi
 
-$bash_profile=~/.bash_profile
+bash_profile=~/.bash_profile
 echo "source ~/.profile
 source ~/.bashrc
 " > $bash_profile
