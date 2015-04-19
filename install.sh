@@ -3,6 +3,10 @@
 
 dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd );
 
+if [ -f $dir/.installed ]
+    echo "Already installed. Exiting..."
+fi
+
 confirm () {
     variants='[Y/n]'
     negate=0
@@ -58,3 +62,5 @@ echo "source $dir/bashrc.sh
 
 echo "New config active!"
 source $bashrc
+
+touch $dir/.installed
