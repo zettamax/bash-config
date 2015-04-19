@@ -41,7 +41,9 @@ while getopts ":hd" opt; do
 done
 
 confirm "This script will erase contens of ~/.bash_profile and move contents of ~/.bashrc to another file.
-Don't worry, everything will be ok. I understand this" 1 || exit 1
+Note that this .bashrc file won't be under VCS.
+Don't worry, everything will be ok.
+> I understand this" 1 || exit 1
 
 dir=~/"$dirname"
 
@@ -61,16 +63,11 @@ if [ -f $bashrc ] && [ -s $bashrc ]; then
     cat $bashrc > $bashrc_saved
 fi
 
-cat $dir/_real_bash_profile.sh > $bash_profile
-cat $dir/_real_bashrc.sh > $bashrc
-cat $D/_add_profile.sh >> ~/.profile
+$bash_profile=~/.bash_profile
+echo "source ~/.profile
+source ~/.bashrc
+" > $bash_profile
 
+echo "source $dir/bashrc.sh
+" > $bashrc
 
-
-#D=$_BASH_CONFIG_DIR
-
-#cat $D/_real_bash_profile.sh > ~/.bash_profile
-#cat $D/_real_bashrc.sh > ~/.bashrc
-#cat $D/_add_profile.sh >> ~/.profile
-
-#rm $D/_real_bash_profile.sh $D/_real_bashrc.sh $D/install.sh
